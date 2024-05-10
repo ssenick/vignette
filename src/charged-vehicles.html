@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Charged vehicles"
+})
+
+<body>
+	<div id="preloader">
+		<span id="loader"></span>
+	</div>
+	<div class="wrapper">
+		@@include('html/_header.htm',{
+		"charged":"_active",
+		"exemptions":"",
+		"map":"",
+		"traffic":"",
+		"faq":""
+		})
+		<main class="page">
+
+			<div class="page__main main-page main-page_charged">
+				<div class="main-page__container">
+					<h1 class="main-page__title">Hungarian toll road network is charged via electronic vignette</h1>
+					<span class="main-page__subtitle">With a few exceptions, the Hungarian motorways, highways and expressways can only be used with pre-purchased electronic vignette.</span>
+				</div>
+				<div class="main-page__background-ibg ">
+					<img src="img/charged-vehicles/background.jpg" alt="background">
+				</div>
+			</div>
+
+			<div class="page__who-must who-must">
+				<div class=" who-must__container">
+					<div class="who-must__main main-who-must">
+						<h3 class="main-who-must__title title">Who Must Purchase an electronic vignette before entering Hungary?</h3>
+						<div class="main-who-must__descr text">
+							<p>The obligation to buy an electronic vignette in Hungary applies to almost all motor vehicles having at least two wheels and a maximum permissible weight of not more than 3,5 tonnes. The buses, motorcycles and towed trailers are also subjects to this obligation.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="page__vegnets-categories categories-vegnets">
+				<div class="categories-vegnets__container">
+					<h3 class="categories-vegnets__title title">The Hungarian e-vignette system applies to these vehicle categories:</h3>
+					<div class="categories-vegnets__items">
+						<div class="categories-vegnets__item item-categories">
+							<div class="item-categories__wrapper">
+								<div class="item-categories__name">D1</div>
+								<div class="item-categories__icons">
+									<div class="item-categories__icon _icon-car-1"></div>
+								</div>
+							</div>
+							<div class="item-categories__descr">Passenger cars with max. 7 seats / max. authorised gross weight of 3,5 tons and their trailers belonging to vehicle category D1.</div>
+						</div>
+						<div class="categories-vegnets__item item-categories">
+							<div class="item-categories__wrapper">
+								<div class="item-categories__name">D2</div>
+								<div class="item-categories__icons">
+									<div class="item-categories__icon _icon-car-2"></div>
+									<div class="item-categories__icon _icon-car-4"></div>
+									<div class="item-categories__icon _icon-car-3"></div>
+								</div>
+							</div>
+							<div class="item-categories__descr">Vans, RVs, minibuses and passenger cars with 8-9 seats / max. authorised gross weight of 3,5 tons.</div>
+						</div>
+						<div class="categories-vegnets__item item-categories">
+							<div class="item-categories__wrapper">
+								<div class="item-categories__name">B2</div>
+								<div class="item-categories__icons">
+									<div class="item-categories__icon _icon-car-5"></div>
+								</div>
+							</div>
+							<div class="item-categories__descr">Buses, i.e. all motor vehicles designed to carry passengers, with more than 9 seats, including the driver.</div>
+						</div>
+						<div class="categories-vegnets__item item-categories">
+							<div class="item-categories__wrapper">
+								<div class="item-categories__name">U</div>
+								<div class="item-categories__icons">
+									<div class="item-categories__icon _icon-car-6"></div>
+								</div>
+							</div>
+							<div class="item-categories__descr">Trailers towed with vehicles of categories D2 and B2.</div>
+						</div>
+						<div class="categories-vegnets__item item-categories">
+							<div class="item-categories__wrapper">
+								<div class="item-categories__name">D1M</div>
+								<div class="item-categories__icons">
+									<div class="item-categories__icon _icon-moto"></div>
+								</div>
+							</div>
+							<div class="item-categories__descr">Motorcycles.</div>
+						</div>
+					</div>
+					<div class="categories-vegnets__info">To define the appropriate vehicle category, please take a look in your vehicle registration certificate.</div>
+				</div>
+			</div>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

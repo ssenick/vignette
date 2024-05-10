@@ -1,0 +1,85 @@
+<head>
+	<title>@@title</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		html.loaded #preloader {
+			opacity: 0;
+			overflow: hidden;
+			pointer-events: none;
+		}
+
+		#preloader {
+			position: fixed;
+			top: 0;
+			right: 0;
+			width: 100vw;
+			height: 100vh;
+			overflow: hidden;
+			background-color: #fff;
+			z-index: 999;
+			transition: overflow 0.5s ease 0s, opacity 0.5s ease 0s, width 0s ease 0.6s, height 0s ease 0.6s;
+
+		}
+
+		#loader {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			display: inline-block;
+			position: fixed;
+			left: calc(50% - 24px);
+			top: calc(50% - 24px);
+			;
+			border: 3px solid;
+			border-color: #6ebeff #6ebeff transparent;
+			box-sizing: border-box;
+			animation: rotation 1s linear infinite;
+		}
+
+		#loader::after {
+			content: "";
+			box-sizing: border-box;
+			position: absolute;
+			z-index: 1111;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			border: 3px solid;
+			border-color: transparent #2169de #2169de;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			animation: rotationBack 0.5s linear infinite;
+			transform-origin: center center;
+		}
+
+		@keyframes rotation {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes rotationBack {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(-360deg);
+			}
+		}
+	</style>
+
+</head>

@@ -1,0 +1,206 @@
+// Заголовки, общие БЄМ блоки и проче...
+.title {
+	font-weight: 600;
+	font-size: 24px;
+	@include adaptiveValue("font-size", 24, 19);
+	line-height: math.div(28px, 20px) * 100%;
+	color: $black;
+	text-align: center;
+}
+
+.text {
+	p {
+		@include adaptiveValue("font-size", 16, 15);
+		line-height: 140%;
+		color: $black;
+		&:not(:last-child) {
+			margin-bottom: rem(22);
+		}
+	}
+}
+
+.download {
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		font-weight: 400;
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(19px, 16px) * 100%;
+		color: $black;
+		@include adaptiveValue("column-gap", 52, 15);
+		&::before {
+			@extend %ic;
+			content: "\e903";
+			flex: 0 0 rem(48);
+			@include adaptiveValue("width", 48, 35);
+			@include adaptiveValue("height", 48, 35);
+			@include adaptiveValue("flex-basis", 48, 35);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: $main;
+			border-radius: rem(5);
+			color: $white;
+			@include adaptiveValue("font-size", 29, 18);
+		}
+		&_black {
+			color: $black;
+		}
+		span {
+			text-decoration-line: underline;
+			transition: color 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					color: $main;
+				}
+			}
+		}
+	}
+}
+
+// maim-page
+.main-page {
+	margin-top: rem(190);
+	@include adaptiveValue("margin-top", 190, 185, 1, 1150, 992);
+	@include adaptiveValue("margin-top", 233, 224, 1, 991, 768);
+	@include adaptiveValue("margin-top", 105, 90, 1, 767, 320);
+	@include adaptiveValue("padding-top", 153, 100);
+	@include adaptiveValue("padding-bottom", 203, 100);
+	position: relative;
+
+	// .main-page__container
+	&__container {
+	}
+	// .main-page__title
+	&__title {
+		text-align: center;
+		position: relative;
+		z-index: 1;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 72, 40);
+		line-height: math.div(85px, 72px) * 100%;
+		color: $white;
+		&:not(:last-child) {
+			margin-bottom: rem(57);
+		}
+	}
+	// .main-page__subtitle
+	&__subtitle {
+		color: $white;
+		position: relative;
+		z-index: 1;
+		font-size: rem(16);
+		line-height: 140%;
+		text-align: center;
+		display: block;
+	}
+	// .main-page__background
+	&__background-ibg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		&::after {
+			content: "";
+			background-color: rgba(0, 0, 0, 0.1);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+	// .main-page_home
+	&_home {
+	}
+	// .main-page_charged
+	&_charged {
+		@include adaptiveValue("padding-top", 104, 60);
+		@include adaptiveValue("padding-bottom", 107, 60);
+		.main-page__title {
+			@include adaptiveValue("font-size", 64, 33);
+			line-height: math.div(76px, 64px) * 100%;
+		}
+		// .main-page__background
+		.main-page__background-ibg {
+			&::after {
+				background-color: rgba(0, 0, 0, 0.44);
+			}
+		}
+	}
+	// .main-page_exemptions
+	&_exemptions {
+		@include adaptiveValue("padding-top", 182, 80);
+		@include adaptiveValue("padding-bottom", 183, 80);
+		.main-page__title {
+			@include adaptiveValue("font-size", 64, 33);
+			line-height: math.div(76px, 64px) * 100%;
+		}
+		// .main-page__background
+		.main-page__background-ibg {
+			&::after {
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+		}
+	}
+	// .main-page_toll-roads-map
+	&_toll-roads-map {
+		@include adaptiveValue("padding-top", 182, 100);
+		@include adaptiveValue("padding-bottom", 183, 100);
+		.main-page__title {
+			@include adaptiveValue("font-size", 64, 33);
+			line-height: math.div(76px, 64px) * 100%;
+			color: $text;
+		}
+		// .main-page__background
+		.main-page__background-ibg {
+			&::after {
+				background-color: rgba(255, 255, 255, 0.3);
+			}
+		}
+	}
+	&_traffic-info {
+		@include adaptiveValue("padding-top", 182, 100);
+		@include adaptiveValue("padding-bottom", 183, 100);
+		.main-page__title {
+			@include adaptiveValue("font-size", 64, 33);
+			line-height: math.div(76px, 64px) * 100%;
+		}
+		// .main-page__background
+		.main-page__background-ibg {
+			&::after {
+				background-color: rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+	// .main-page_faq
+	&_faq {
+		background-color: $main;
+		@include adaptiveValue("padding-top", 55, 100);
+		@include adaptiveValue("padding-bottom", 74, 100);
+		// .main-page__container
+		.main-page__container-small {
+			display: flex;
+			align-items: center;
+			column-gap: rem(11);
+		}
+		.main-page__title {
+			text-align: left;
+			@include adaptiveValue("font-size", 64, 33);
+			line-height: math.div(76px, 64px) * 100%;
+			flex: 1 1 auto;
+			&:not(:last-child) {
+				margin: 0;
+			}
+		}
+		.main-page__image {
+			flex: 0 0 16%;
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}

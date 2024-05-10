@@ -1,0 +1,176 @@
+.page {
+	// .page__main
+	&__main.main-page_faq {
+		@include adaptiveValue("margin-bottom", 98, 40);
+	}
+	// .page__questions
+	&__questions {
+		@include adaptiveValue("margin-bottom", 73, 40);
+	}
+	// .page__send-mail
+	&__send-mail {
+		@include adaptiveValue("margin-bottom", 88, 40);
+	}
+}
+
+//your-questions
+.your-questions {
+	// .your-questions__container-small
+	&__container-small {
+	}
+	// .your-questions__title
+	&__title {
+		text-align: left;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 62, 25);
+		}
+	}
+	// .your-questions__items
+	&__items {
+		counter-reset: list-number;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 73, 30);
+		}
+	}
+	// .your-questions__item
+	&__item {
+	}
+}
+
+//question
+.question {
+	display: grid;
+	grid-template-columns: rem(48) 1fr;
+	align-items: center;
+	border-top: rem(1) solid $bg;
+	@include adaptiveValue("padding-top", 20, 15);
+
+	@media (max-width: $tablet) {
+		grid-template-columns: rem(40) 1fr;
+	}
+	@media (max-width: $mobile) {
+		grid-template-columns: rem(35) 1fr;
+	}
+
+	@media (max-width: $mobileSmall) {
+		grid-template-columns: rem(30) 1fr;
+	}
+	&::before {
+		align-self: start;
+		counter-increment: list-number;
+		content: counter(list-number);
+		min-width: rem(48);
+		height: rem(48);
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		background: $main;
+		border-radius: rem(5);
+		padding: 0 rem(5);
+		color: $white;
+		font-weight: 600;
+		@include adaptiveValue("font-size", 24, 15);
+		line-height: math.div(28px, 24px) * 100%;
+		// @include adaptiveValue("margin-bottom", 20, 10);
+		@media (max-width: $tablet) {
+			min-width: rem(40);
+			height: rem(40);
+		}
+		@media (max-width: $mobile) {
+			min-width: rem(35);
+			height: rem(35);
+		}
+		@media (max-width: $mobileSmall) {
+			min-width: rem(25);
+			height: rem(30);
+		}
+	}
+	// .question__title
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex: 1 1 auto;
+		font-weight: 600;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: math.div(24px, 20px) * 100%;
+		color: $black;
+		position: relative;
+		min-height: rem(48);
+		@include adaptiveValue("padding-left", 98, 50);
+		@include adaptiveValue("padding-right", 80, 30);
+		@include adaptiveValue("margin-left", -48, -35);
+		@include adaptiveValue("margin-bottom", 20, 15);
+		@media (max-width: $tablet) {
+			min-height: rem(40);
+		}
+		@media (max-width: $mobile) {
+			min-height: rem(35);
+		}
+		@media (max-width: $mobileSmall) {
+			min-height: rem(30);
+		}
+		// padding-bottom: rem(20);
+		&::before,
+		&::after {
+			content: "";
+			width: rem(10);
+			height: rem(2);
+			background-color: $text;
+			position: absolute;
+			top: rem(22);
+			@include adaptiveValue("top", 22, 12);
+
+			transition: all 0.3s ease 0s;
+		}
+		&::before {
+			right: rem(6);
+			transform: rotate(45deg);
+			border-radius: rem(2) rem(0) rem(2) rem(2);
+		}
+		&::after {
+			right: rem(0);
+			transform: rotate(-45deg);
+			border-radius: rem(0) rem(2) rem(2) rem(2);
+		}
+		&._spoller-active {
+			&::before,
+			&::after {
+				width: rem(18);
+			}
+			&::before {
+				right: rem(0);
+				transform: rotate(45deg);
+			}
+		}
+	}
+	// .question__text
+	&__text {
+	}
+	// .question__body
+	&__body {
+		grid-column: span 2;
+		@include adaptiveValue("padding-left", 98, 50);
+		@include adaptiveValue("padding-right", 80, 0);
+		@include adaptiveValue("padding-top", 20, 10);
+		padding-bottom: rem(20);
+		p {
+			padding-bottom: rem(17);
+		}
+	}
+}
+
+//mail-send
+.mail-send {
+	// .mail-send__container
+	&__container {
+	}
+	// .mail-send__text
+	&__text {
+		text-align: center;
+		font-weight: 600;
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: math.div(24px, 20px) * 100%;
+		color: $black;
+	}
+}

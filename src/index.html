@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+
+
+<body>
+
+	<div id="preloader">
+		<span id="loader"></span>
+	</div>
+	<div class="wrapper">
+		@@include('html/_header.htm',{
+		"home":"_no-active",
+		"charged":"",
+		"exemptions":"",
+		"map":"",
+		"traffic":"",
+		"faq":""
+		})
+		<main class="page">
+
+			<div class="page__main main-page main-page_home">
+				<div class="main-page__container">
+					<h1 class="main-page__title">Hungarian electronic vignette</h1>
+				</div>
+				<div class="main-page__background-ibg ">
+					<img src="img/home/summer-background.jpg" alt="background">
+				</div>
+			</div>
+
+			<div class="page__e-vignettes e-vignettes">
+				<div class="e-vignettes__container">
+					<h3 class="e-vignettes__title title">Select the type of your vehicle and the duration of Hungarian e-vignette:</h3>
+					<div data-spollers class="e-vignettes__categories">
+						<div class="e-vignettes__category category">
+							<a href="#" id="category_1" data-goto="#category_1" data-goto-top="30" data-goto-header data-spoller  class="category__type type-category">
+								<div class="type-category__header">
+									<span class="type-category__type">D1</span>
+									<span class="type-category__icon _icon-car-1"></span>
+								</div>
+								<div class="type-category__info">
+									<h5 class="type-category__name">Passenger car</h5>
+									<div class="type-category__descr">(max. 7 seats / up to 3,5 t)</div>
+								</div>
+							</a>
+							<div class="category__body">
+								<div class="category__e-vignettes">
+									<a href="#" class="category__e-vignette e-vignette">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">10 DAYS</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+									<a href="#" class="category__e-vignette e-vignette">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">1 MONTH</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+									<a href="#" class="category__e-vignette e-vignette e-vignette_popular">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">1 YEAR</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="e-vignettes__category category">
+							<a href="#" id="category_2" data-goto="#category_2" data-goto-top="30" data-goto-header data-spoller class="category__type type-category">
+								<div class="type-category__header">
+									<span class="type-category__type">D2</span>
+									<span class="type-category__icon _icon-car-3"></span>
+								</div>
+								<div class="type-category__info">
+									<h5 class="type-category__name">
+										Van, RV, Minibus, Passenger car</h5>
+									<div class="type-category__descr">(8-9 seats / up to 3,5 t)</div>
+								</div>
+							</a>
+							<div class="category__body">
+								<div class="category__e-vignettes">
+									<a href="#" class="category__e-vignette e-vignette">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">10 DAYS</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+									<a href="#" class="category__e-vignette e-vignette e-vignette_popular">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">1 MONTH</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+									<a href="#" class="category__e-vignette e-vignette ">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">1 YEAR</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="e-vignettes__category category">
+							<a href="#" id="category_3" data-goto="#category_3" data-goto-top="30" data-goto-header data-spoller class="category__type type-category">
+								<div class="type-category__header">
+									<span class="type-category__type">B2</span>
+									<span class="type-category__icon _icon-car-5"></span>
+								</div>
+								<div class="type-category__info">
+									<h5 class="type-category__name">
+										Bus</h5>
+									<div class="type-category__descr">(more than 10 seats)</div>
+								</div>
+							</a>
+							<div class="category__body">
+								<div class="category__e-vignettes">
+									<a href="#" class="category__e-vignette e-vignette">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">10 DAYS</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+									<a href="#" class="category__e-vignette e-vignette ">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">1 MONTH</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+									<a href="#" class="category__e-vignette e-vignette e-vignette_popular">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">1 YEAR</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="e-vignettes__category category">
+							<a href="#" id="category_4" data-goto="#category_4" data-goto-top="30" data-goto-header data-spoller class="category__type type-category">
+								<div class="type-category__header">
+									<span class="type-category__type">U</span>
+									<span class="type-category__icon _icon-car-6"></span>
+								</div>
+								<div class="type-category__info">
+									<h5 class="type-category__name">
+										Trailer</h5>
+									<div class="type-category__descr">(for D2 and B2)</div>
+								</div>
+							</a>
+							<div class="category__body">
+								<div class="category__e-vignettes">
+									<a href="#" class="category__e-vignette e-vignette e-vignette_popular">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">10 DAYS</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+									<a href="#" class="category__e-vignette e-vignette ">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">1 MONTH</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+									<a href="#" class="category__e-vignette e-vignette ">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">1 YEAR</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="e-vignettes__category category">
+							<a href="#" id="category_5" data-goto="#category_5" data-goto-top="30" data-goto-header data-spoller class="category__type type-category">
+								<div class="type-category__header">
+									<span class="type-category__type">D1M</span>
+									<span class="type-category__icon _icon-moto"></span>
+								</div>
+								<div class="type-category__info">
+									<h5 class="type-category__name">
+										Motorcycle</h5>
+									<div class="type-category__descr"> </div>
+								</div>
+							</a>
+							<div class="category__body">
+								<div class="category__e-vignettes">
+									<a href="#" class="category__e-vignette e-vignette e-vignette_popular">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">10 DAYS</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+									<a href="#" class="category__e-vignette e-vignette ">
+										<div class="e-vignette__main">
+											<div class="e-vignette__days">1 MONTH</div>
+											<div class="e-vignette__price">XX,YY €</div>
+										</div>
+										<div class="e-vignette__buy">
+											<div class="e-vignette__cart _icon-cart"><span></span></div>
+											<div class="e-vignette__text">Buy</div>
+										</div>
+									</a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="page__transport-list transport-list">
+				<div class="transport-list__container">
+					<h3 class="transport-list__title title">Who must purchase an electronic vignette in Hungary?</h3>
+					<ul class="transport-list__items">
+						<li class="transport-list__item _icon-car-6"></li>
+						<li class="transport-list__item _icon-car-2"></li>
+						<li class="transport-list__item _icon-car-3"></li>
+						<li class="transport-list__item _icon-car-4"></li>
+						<li class="transport-list__item _icon-car-5"></li>
+						<li class="transport-list__item _icon-car-1"></li>
+						<li class="transport-list__item _icon-moto"></li>
+					</ul>
+					<div class="transport-list__discription text">
+						<p>All motorcycles, vehicles with a maximum weight of 3,5 tons and buses have an obligation to purchase an electronic vignette in Hungary.
+							The obligation to purchase hungarian electronic vignette also applies to trailers.</p>
+					</div>
+					<span class="transport-list__wish">Have a safe journey with e-vignette.com!</span>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

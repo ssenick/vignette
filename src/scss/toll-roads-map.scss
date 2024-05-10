@@ -1,0 +1,108 @@
+.page {
+	// .page__main
+	&__main.main-page_toll-roads-map {
+		@include adaptiveValue("margin-bottom", 60, 40);
+	}
+	// .page__download
+	&__download {
+		@include adaptiveValue("margin-bottom", 60, 40);
+	}
+	// .page__clarification
+	&__clarification {
+		@include adaptiveValue("margin-bottom", 60, 20);
+	}
+	// .page__sections-road
+	&__sections-road {
+		@include adaptiveValue("margin-bottom", 108, 30);
+	}
+}
+
+//clarification
+.clarification {
+	// .clarification__container
+	&__container-small {
+	}
+	// .clarification__wrapper
+	&__wrapper {
+		@include adaptiveValue("padding-bottom", 60, 40);
+		border-bottom: rem(1) solid $bg;
+	}
+
+	// .clarification__text
+	&__text {
+		border-radius: rem(5);
+		background-color: $bg;
+		@include adaptiveValue("padding-top", 50, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
+		@include adaptiveValue("padding-left", 100, 15);
+		@include adaptiveValue("padding-right", 100, 15);
+		@include adaptiveValue("font-size", 16, 14);
+		line-height: math.div(19px, 16px) * 100%;
+		text-align: center;
+		color: $black;
+	}
+}
+
+//road-sections
+.road-sections {
+	// .road-sections__container
+	&__container {
+	}
+	// .road-sections__table
+	&__table {
+	}
+}
+.table-road-sections {
+	// .table-road-sections__header
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: rem(20);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 54, 20);
+		}
+	}
+	// .table-road-sections__title
+	&__title {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: math.div(28px, 24px) * 100%;
+		color: $black;
+	}
+	// .table-road-sections__row
+	&__row {
+		@include adaptiveValue("padding-bottom", 20, 12);
+		@include adaptiveValue("padding-top", 20, 12);
+		border-top: rem(1) solid $bg;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: rem(20);
+	}
+
+	// .table-road-sections__name
+	&__name {
+		font-size: rem(16);
+		line-height: 140%;
+		color: $black;
+	}
+	// .table-road-sections__namber
+	&__namber {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 20, 16);
+		line-height: math.div(24px, 20px) * 100%;
+		text-align: center;
+		color: $white;
+		flex: 0 0 rem(60);
+		@include adaptiveValue("flex-basis", 60, 50);
+		@include adaptiveValue("min-width", 60, 50);
+		height: rem(38);
+		background: $main;
+		border-radius: rem(5);
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		padding: rem(4) rem(7);
+	}
+}

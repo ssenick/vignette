@@ -1,0 +1,275 @@
+.page {
+	// .page__list-exemptions
+	&__list-exemptions {
+		@include adaptiveValue("margin-bottom", 50, 40);
+	}
+	// .page__applying
+	&__applying {
+		@include adaptiveValue("margin-bottom", 111, 40);
+	}
+	// .page__question
+	&__question {
+		@include adaptiveValue("margin-bottom", 111, 40);
+	}
+	// .page__tricks
+	&__tricks {
+		@include adaptiveValue("margin-bottom", 83, 40);
+	}
+}
+
+//exemptions-list
+.exemptions-list {
+	max-width: rem(920);
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: rem(-55);
+	position: relative;
+	z-index: 2;
+	@media (max-width: $tablet) {
+		margin-top: rem(-35);
+	}
+	@media (max-width: $mobile) {
+		margin-top: rem(-20);
+	}
+	// .exemptions-list__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		@include adaptiveValue("column-gap", 40, 30, 0, 1150, 992);
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+			@include adaptiveValue("row-gap", 40, 20, 0, 992, 320);
+			@include adaptiveValue("column-gap", 60, 20, 0, 992, 768);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .exemptions-list__item
+	&__item {
+	}
+}
+.item-exemptions-list {
+	display: flex;
+	flex-direction: column;
+	// .item-exemptions-list__icon
+	&__icon {
+		background-color: $main;
+		border-radius: rem(5);
+		@include adaptiveValue("padding", 26, 18);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: rem(120);
+		&:not(:last-child) {
+			margin-bottom: rem(47);
+		}
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $tablet) {
+			min-height: rem(100);
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}
+		}
+		@media (max-width: $mobile) {
+			min-height: auto;
+			&:not(:last-child) {
+				margin-bottom: rem(15);
+			}
+			img {
+				@include adaptiveValue("max-height", 60, 30, 0, 768, 320);
+			}
+		}
+	}
+	// .item-exemptions-list__descr
+	&__descr {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 600;
+		@include adaptiveValue("font-size", 24, 15);
+		line-height: math.div(28px, 24px) * 100%;
+		text-align: center;
+		text-transform: uppercase;
+		color: $main;
+	}
+}
+
+//spplying
+.spplying {
+	@media (max-width: $mobile) {
+		@include adaptiveValue("margin-left", 0, -10, 0, 762, 320);
+		@include adaptiveValue("margin-right", 0, -10, 0, 762, 320);
+	}
+	// .spplying__container
+	&__container {
+	}
+	// .spplying__main
+	&__main {
+		@include adaptiveValue("padding-top", 91, 15);
+		@include adaptiveValue("padding-bottom", 100, 15);
+		@include adaptiveValue("padding-right", 100, 15);
+		@include adaptiveValue("padding-left", 100, 10);
+		background-color: $bg;
+		border-radius: rem(5);
+	}
+
+	// .spplying__title
+	&__title {
+		text-align: left;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 61, 25);
+		}
+	}
+	// .spplying__descr
+	&__descr {
+		@include adaptiveValue("font-size", 16, 15);
+		line-height: 140%;
+		color: $black;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 61, 25);
+		}
+	}
+	// .spplying__list
+	&__list {
+		counter-reset: list-number;
+		display: grid;
+		@include adaptiveValue("row-gap", 45, 20);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 63, 25);
+		}
+	}
+	// .spplying__item
+	&__item {
+		padding: rem(4) 0;
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("column-gap", 52, 15);
+		&::before {
+			counter-increment: list-number;
+			content: counter(list-number);
+			flex: 0 0 rem(48);
+			@include adaptiveValue("width", 48, 35);
+			@include adaptiveValue("height", 48, 35);
+			@include adaptiveValue("flex-basis", 48, 35);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: $main;
+			border-radius: rem(5);
+			color: $white;
+			font-weight: 600;
+			@include adaptiveValue("font-size", 24, 18);
+			line-height: math.div(28px, 24px) * 100%;
+		}
+		@media (max-width: $mobile) {
+			align-items: flex-start;
+		}
+	}
+	// .spplying__download
+	&__download {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 63, 25);
+		}
+	}
+}
+
+.item-spplying {
+	// .item-spplying__text
+	&__text {
+		@include adaptiveValue("font-size", 16, 15);
+		line-height: 140%;
+		color: $black;
+	}
+}
+
+.question-block {
+	// .question-block__container
+	&__container {
+	}
+	// .question-block__main
+	&__main {
+		background-color: $main;
+		border-radius: rem(5);
+		@include adaptiveValue("padding-top", 60, 40);
+		@include adaptiveValue("padding-bottom", 60, 40);
+		@include adaptiveValue("padding-right", 90, 25);
+		@include adaptiveValue("padding-left", 90, 25);
+	}
+	// .question-block__title
+	&__title {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 64, 25);
+		line-height: math.div(76px, 64px) * 100%;
+		color: $white;
+		text-align: center;
+	}
+}
+
+//tricks-for-drivers
+.tricks-for-drivers {
+	// .tricks-for-drivers__container
+	&__container {
+	}
+	// .tricks-for-drivers__wrapper
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		@include adaptiveValue("column-gap", 60, 30, 0, 1150, 992);
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+	// .tricks-for-drivers__column
+	&__column {
+		display: flex;
+		flex-direction: column;
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 40, 20);
+			}
+		}
+	}
+	// .tricks-for-drivers__block
+	&__block {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 20);
+		}
+	}
+	// .tricks-for-drivers__title
+	&__title {
+		text-align: left;
+		line-height: math.div(28px, 24px) * 100%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 20);
+		}
+	}
+	// .tricks-for-drivers__text
+	&__text {
+		p {
+			text-indent: rem(20);
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 39, 15);
+			}
+			@media (max-width: $mobile) {
+				text-indent: rem(16);
+			}
+		}
+	}
+	// .tricks-for-drivers__action
+	&__action {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		@media (max-width: $mobile) {
+			padding-top: rem(20);
+		}
+	}
+	// .tricks-for-drivers__button
+	&__button {
+	}
+}

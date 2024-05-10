@@ -1,0 +1,72 @@
+.footer {
+	background-color: $main;
+	@include adaptiveValue("padding-top", 70, 30);
+	@include adaptiveValue("padding-bottom", 66, 30);
+	color: $white;
+	// .footer__container
+	&__container {
+	}
+	// .footer__main
+	&__main {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 67, 30);
+		}
+	}
+	// .footer__menu
+	&__menu {
+	}
+}
+.main-footer {
+	// .main-footer__items
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: rem(25);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	// .main-footer__item
+	&__item {
+	}
+	// .main-footer__link
+	&__link {
+		font-weight: 600;
+		font-size: rem(24);
+		line-height: math.div(28px, 24px) * 100%;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.menu-footer {
+	// .menu-footer__items
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		column-gap: rem(35);
+		row-gap: rem(20);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	// .menu-footer__item
+	&__item {
+	}
+	// .menu-footer__link
+	&__link {
+		font-size: rem(20);
+		line-height: math.div(24px, 20px) * 100%;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

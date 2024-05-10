@@ -1,0 +1,36 @@
+.page {
+	// .page__main
+	&__main.main-page_traffic-info {
+		@include adaptiveValue("margin-bottom", 100, 40);
+	}
+	// .page__traffic-information
+	&__traffic-information {
+		@include adaptiveValue("margin-bottom", 100, 40);
+	}
+}
+
+.information-tarffic {
+	// .information-tarffic__container
+	&__container {
+	}
+	// .information-tarffic__wrapper
+	&__wrapper {
+		@include adaptiveValue("padding-top", 86, 30);
+		@include adaptiveValue("padding-bottom", 57, 30);
+		@include adaptiveValue("padding-right", 100, 15);
+		@include adaptiveValue("padding-left", 100, 15);
+		background-color: $bg;
+		border-radius: rem(5);
+	}
+	// .information-tarffic__title
+	&__title {
+		text-align: left;
+		@include adaptiveValue("margin-bottom", 74, 15);
+	}
+	// .information-tarffic__descr
+	&__descr {
+		p {
+			margin-bottom: rem(22);
+		}
+	}
+}
